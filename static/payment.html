@@ -1,0 +1,90 @@
+<!--21109853D_Jason Liao - 21035803D Ho Lok Ki-->
+<!doctype html>
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <title>21109853D_21035803d_Train Ticket Selling System</title>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/payment.js"></script>
+  </head>
+
+  <body>
+    <header class="text-bg-dark text-center p-3 h1 mb-0">Train Ticket Selling System</header>
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <div class="navbar-nav navbar-nav-scroll">
+            <div class="nav-item">
+              <a class="nav-link link-primary m-lg-2 fw-bold" href="event.html">Event Dashboard</a>
+            </div>
+
+            <div class="nav-item">
+              <a class="nav-link link-secondary m-lg-2" href="#">Profile</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div>
+        <div class="text-center h2 p-3 mb-2 bg-success text-white">Payment</div>
+        <div class="container text-center fs-4 fw-bold">
+          Route: <a id="staringTitle"></a> to <a id="destinationTitle"></a>
+        </div>
+        <div class="container text-center fs-4 fw-bold">
+          Date: <a id="dateTitle"></a> Departure Time: <a id="sTimeTitle"></a>, Arrival Time: <a id="eTimeTitle"></a>
+        </div>
+        <div class="container text-center fs-4 fw-bold">
+          Selected: <span class="text-danger" id="selectedId"></span>
+        </div>
+        <div class="container text-center fs-4 fw-bold">Cost: $<a id="totalCost"></a></div>
+
+        <div class="container my-5">
+          <form>
+            <div class="mb-4">
+              <label for="name" class="form-label fs-4">Card Holder's Name</label>
+              <input type="text" class="form-control fs-4" id="name" placeholder="John Doe" required />
+            </div>
+            <div class="mb-4">
+              <label for="cardNumber" class="form-label fs-4">Card Number</label>
+              <input type="text" class="form-control fs-4" id="cardNumber" placeholder="1234 5678 9012 3456" required />
+            </div>
+            <div class="mb-4">
+              <label for="expiryDate" class="form-label fs-4">Expiry Date</label>
+              <input type="text" class="form-control fs-4" id="expiryDate" placeholder="MM/YY" required />
+            </div>
+            <div class="mb-4">
+              <label for="cvv" class="form-label fs-4">CVV</label>
+              <input type="text" class="form-control fs-4" id="cvv" placeholder="123" required />
+            </div>
+            <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+            <button class="btn btn-secondary btn-lg btn-block" id="backButton">Back</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-bg-dark text-center p-2 fixed-bottom">
+      ©21109853D_Jason Liao - 21035803D Ho Lok Ki - EIE4432 Group Project
+    </footer>
+  </body>
+</html>

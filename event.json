@@ -1,0 +1,11 @@
+{
+ "date": "2023-Oct-28"
+ sTime:"12:00"
+ eTime:"13:00"
+ economyPrice:80
+ firstClassPrice:120
+ strating:"Hong Kong"
+ destination:"Shenzhen"
+ photoPath:"assets/HKtoShenzhen.jpg"
+ trainNumber:"LH000001"
+}

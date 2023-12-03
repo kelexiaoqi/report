@@ -1,0 +1,138 @@
+<!--21109853D_Jason Liao - 21035803D Ho Lok Ki-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8" name="viewport" content="width=device-width" />
+    <script src="js/profile.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Register System</title>
+  </head>
+
+  <body>
+    <header class="text-bg-dark text-center p-3 h1 mb-0">Train Ticket Selling System</header>
+    <nav class="navbar navbar-expand-lg bg-body-secondary">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <div class="navbar-nav navbar-nav-scroll">
+            <div class="nav-item">
+              <a class="nav-link link-secondary m-lg-2" href="event.html">Event Dashboard</a>
+            </div>
+
+            <div class="nav-item">
+              <a class="nav-link link-primary fw-bold m-lg-2" href="#">Profile</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link link-secondary m-lg-2" href="history.html">History</a>
+            </div>
+          </div>
+          <div class="navbar-text ms-auto">
+            <button type="button" id="logout" class="btn btn-primary">Logout</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <form id="profileForm" action="/auth/profile" method="POST">
+        <div class="form-row p-3">
+          <div class="col-auto">
+            <label for="username" class="form-label col-form-label-lg">User ID</label>
+            <input type="text" class="form-control form-control-lg" id="username" name="username" value="" readonly />
+          </div>
+        </div>
+
+        <div class="form-row p-3">
+          <div class="col-auto">
+            <label for="nickname" class="form-label col-form-label-lg">Nickname</label>
+            <input type="text" class="form-control form-control-lg" id="nickname" name="nickname" value="" readonly />
+          </div>
+        </div>
+
+        <div class="form-row p-3">
+          <div class="col-auto">
+            <label for="email" class="form-label col-form-label-lg">Email</label>
+            <input type="email" class="form-control form-control-lg" id="email" name="email" value="" readonly />
+          </div>
+        </div>
+
+        <div class="form-row p-3">
+          <legend class="col-form-label-lg col-sm-2 pt-0">Gender</legend>
+          <p></p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="male" value="male" disabled />
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="female" value="female" disabled />
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+        </div>
+
+        <div class="form-row p-3">
+          <label class="form-label col-form-label-lg" for="birthdate">Birthdate</label>
+          <input class="form-control form-control-lg" id="birthdate" name="birthdate" value="" type="date" readonly />
+        </div>
+
+        <div class="form-group-row p-3">
+          <label for="profile-image-path" class="form-label col-form-label-lg">Image for profile Image</label><br />
+          <img class="profile-image" alt="Profile Image" />
+          <input type="file" class="form-control-file-lg" id="profile-image-path" name="profile-image-path" disabled />
+        </div>
+
+        <div class="form-row p-3">
+          <div class="col-auto">
+            <label for="password" class="form-label col-form-label-lg">Password</label>
+            <input
+              type="password"
+              class="form-control form-control-lg"
+              id="password"
+              name="password"
+              value=""
+              readonly />
+          </div>
+        </div>
+
+        <div class="form-row p-3">
+          <div class="col-auto">
+            <label for="password2" class="form-label col-form-label-lg">Confirm Password</label>
+            <input
+              type="password"
+              class="form-control form-control-lg"
+              id="password2"
+              name="password2"
+              value=""
+              readonly />
+          </div>
+        </div>
+
+        <div class="row-auto p-3 mb-5">
+          <button type="button" id="editButton" class="btn btn-primary">Edit</button>
+          <button type="submit" id="confirmButton" class="btn btn-primary" disabled>Confrim</button>
+          <button type="button" id="cancelButton" class="btn btn-danger" disabled>Cancel</button>
+        </div>
+      </form>
+    </main>
+    <footer class="text-bg-dark text-center p-2 fixed-bottom">
+      ©21109853D_Jason Liao - 21035803D Ho Lok Ki - EIE4432 Group Project EIE4432 Group Project
+    </footer>
+  </body>
+</html>
